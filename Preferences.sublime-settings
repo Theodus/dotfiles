@@ -1,0 +1,25 @@
+/*
+Packages:
+  - All Autocomplete
+  - Git Gutter
+  - LLVM
+  - Markdown Preview
+  - Pony Language
+  - Theme - Soda
+*/
+{
+	"color_scheme": "Packages/Pony Language/Pony Monokai.tmTheme",
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"show_encoding": true,
+	"soda_folder_icons": true,
+	"theme": "Soda Dark 3.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
