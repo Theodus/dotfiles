@@ -55,8 +55,5 @@ export EDITOR=subl
 
 # Go
 PATH=$PATH:/usr/local/go/bin
-GOPATH=$HOME/dev/go
+GOPATH=$HOME/src/go
 PATH=$PATH:$GOPATH/bin:$GOROOT/bin
-
-# Pony development
-alias mypony=$HOME/src/ponyc/build/release/ponyc
