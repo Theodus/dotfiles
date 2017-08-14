@@ -20,13 +20,11 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# enable color support of ls and also add handy aliases
+# enable color support of ls
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
   alias ls='ls --color=auto'
   alias grep='grep --color=auto'
-  alias fgrep='fgrep --color=auto'
-  alias egrep='egrep --color=auto'
 fi
 
 # some more ls aliases
@@ -51,9 +49,11 @@ parse_git_branch() {
 }
 PS1="\[\033[1;22m\]\u@\h \[\033[1;36m\]\w\[\033[1;33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-export EDITOR=subl
+export EDITOR=vim
 
 # Go
-PATH=$PATH:/usr/local/go/bin
-GOPATH=$HOME/src/go
-PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+export GOPATH=$HOME/src/go
+export PATH=$PATH:$GOPATH/bin
+
+export CC=clang
+export CXX=clang++
