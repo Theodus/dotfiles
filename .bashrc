@@ -50,6 +50,7 @@ parse_git_branch() {
 PS1="\[\033[1;22m\]\u@\h \[\033[1;36m\]\w\[\033[1;33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 export EDITOR=vim
+export TERM=xterm-256color
 
 # Go
 export GOPATH=$HOME/src/go
