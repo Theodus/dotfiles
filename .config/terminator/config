@@ -1,20 +1,22 @@
 [global_config]
+  title_font = Sans 11
 [keybindings]
-[profiles]
-  [[default]]
-    use_system_font = False
-    visible_bell = True
-    background_image = None
-    foreground_color = "#00ff00"
-    icon_bell = False
-    show_titlebar = False
-    font = Monospace 14
+  cycle_next = None
+  move_tab_left = <Primary>Tab
+  move_tab_right = <Primary><Shift>Tab
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    font = Hack 12
+    foreground_color = "#00ff00"
+    show_titlebar = False
+    use_system_font = False

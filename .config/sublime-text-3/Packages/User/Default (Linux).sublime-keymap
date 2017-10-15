@@ -1,0 +1,12 @@
+[
+    { "keys": ["ctrl+b"], "command": "toggle_side_bar" },
+    { "keys": ["ctrl+left"], "command": "move_to", "args": {"to": "bol", "extend": false} },
+    { "keys": ["ctrl+right"], "command": "move_to", "args": {"to": "eol", "extend": false} },
+    { "keys": ["ctrl+up"], "command": "move_to", "args": {"to": "bof", "extend": false} },
+    { "keys": ["ctrl+down"], "command": "move_to", "args": {"to": "eof", "extend": false} },
+    { "keys": ["ctrl+shift+right"], "command": "move_to", "args": {"to": "hardeol", "extend": true} },
+    { "keys": ["ctrl+shift+left"], "command": "move_to", "args": {"to": "hardbol", "extend": true} },
+
+    { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" }
+]
