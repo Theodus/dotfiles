@@ -1,0 +1,8 @@
+
+- All Autocomplete
+- Git Gutter
+- LLVM
+- Markdown Preview
+- Pony Language
+- Theme - Soda
+
