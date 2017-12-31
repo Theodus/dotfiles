@@ -1,14 +1,9 @@
-/*
-Packages:
-  - All Autocomplete
-  - Git Gutter
-  - LLVM
-  - Markdown Preview
-  - Pony Language
-  - Theme - Soda
-*/
 {
 	"color_scheme": "Packages/Pony Language/Pony Monokai.tmTheme",
+	"file_exclude_patterns":
+	[
+		"*.sublime-workspace"
+	],
 	"font_size": 14,
 	"ignored_packages":
 	[
