@@ -45,6 +45,8 @@ parse_git_dirty() {
 }
 export PS1="\[\e[1;34m\]\u\[\e[1;37m\]|\[\e[1;32m\]\w\[\e[33m\]\$(parse_git_branch)\[\e[1;37m\]\$\[\e[m\] "
 
+alias l='ls -A'
+
 export EDITOR=vim
 export TERM=xterm-256color
 
