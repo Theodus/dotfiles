@@ -21,7 +21,13 @@ add_default_dotfiles() {
     git clone https://github.com/theodus/dotfiles && \
     cd -
 
-  cat "$dotfiles_dir/.profile_ext.sh" >> "$HOME/.profile"
+
+  if [ -f "$HOME/.bashrc" ]; then
+    cat "$dotfiles_dir/.profile_ext.sh" >> "$HOME/.bashrc"
+  else
+    cat "$dotfiles_dir/.profile_ext.sh" >> "$HOME/.profile"
+  fi
+
   cp "$dotfiles_dir/.editorconfig" "$HOME"
   cp -r "$dotfiles_dir"/.config/* "$HOME/.config"
 }

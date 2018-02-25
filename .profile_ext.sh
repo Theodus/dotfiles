@@ -1,3 +1,4 @@
+
 # prompt
 function nonzero_return() {
   RETVAL=$?
@@ -47,6 +48,8 @@ function parse_git_dirty {
   fi
 }
 export PS1="\[\e[34m\]\u\[\e[m\]|\[\e[32m\]\w\[\e[33m\]\`parse_git_branch\`\[\e[37m\]\`nonzero_return\`\[\e[m\]\\$ "
+
+alias l='ls -A'
 
 export EDITOR=vim
 export TERM=xterm-256color
