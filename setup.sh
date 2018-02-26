@@ -1,5 +1,7 @@
 #!/bin/sh
 
+dotfiles_dir="$HOME/src/theodus/dotfiles"
+
 require() {
   for cmd in "$@"; do
     if ! command -v "$cmd" >/dev/null; then
@@ -14,9 +16,15 @@ build_src_tree() {
   mkdir -p "$HOME/src/theodus"
 }
 
+build_bin_dir() {
+  printf "Adding bin files...\n"
+  mkdir -p "$HOME/bin"
+
+  cp "$dotfiles_dir/bin/*" "$HOME/bin"
+}
+
 add_default_dotfiles() {
   printf "Adding default dotfiles...\n"
-  dotfiles_dir="$HOME/src/theodus/dotfiles"
   cd "$HOME/src/theodus" && \
     git clone https://github.com/theodus/dotfiles && \
     cd -
@@ -40,5 +48,6 @@ setup_sublime() {
 
 require clang git go subl terminator
 build_src_tree
+build_bin_dir
 add_default_dotfiles
 setup_sublime
