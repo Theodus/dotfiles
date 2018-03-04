@@ -50,9 +50,11 @@ alias l='ls -A'
 export EDITOR=vim
 export TERM=xterm-256color
 
+export PATH="$PATH":"$HOME/bin"
+
 # go
-export GOPATH=$HOME/src/go
-export PATH=$PATH:$GOPATH/bin
+export GOPATH="$HOME/src/go"
+export PATH="$PATH":"$GOPATH/bin"
 
 # clang
 export CC=clang
