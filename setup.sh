@@ -21,6 +21,7 @@ add_default_dotfiles() {
     git clone https://github.com/theodus/dotfiles && \
     cd -
 
+  cp "$dotfiles_dir/.vimrc" "$HOME"
 
   if [ -f "$HOME/.bashrc" ]; then
     cat "$dotfiles_dir/.profile_ext.sh" >> "$HOME/.bashrc"
@@ -42,3 +43,4 @@ require clang git go subl terminator
 build_src_tree
 add_default_dotfiles
 setup_sublime
+
