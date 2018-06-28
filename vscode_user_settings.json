@@ -1,0 +1,21 @@
+{
+  "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
+  "git.ignoreMissingGitWarning": true,
+  "window.zoomLevel": 1,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "editor.rulers": [
+    60,
+    80
+  ],
+  "cSpell.userWords": [
+    "chrono",
+    "noexcept",
+    "picobench"
+  ],
+  "files.eol": "\n"
+}
