@@ -32,14 +32,12 @@ alias fgrep='fgrep --color=auto'
 
 alias wget='wget -c'
 
-# disable ctrl-s and ctrl-q
+# options
+## disable ctrl-s and ctrl-q
 stty -ixon
-
-# cd without cd
+## cd without cd
 shopt -s autocd
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+## check the window size after each command
 shopt -s checkwinsize
 
 # enable programmable completion features (you don't need to enable
