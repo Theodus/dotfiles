@@ -1,6 +1,9 @@
+#!/bin/bash
 
-# prompt
-parse_git_branch() {
+set -e
+set -u
+
+git_prompt() {
   BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
   if [ ! "$BRANCH" = "" ]; then
     STAT=$(parse_git_dirty)
@@ -43,19 +46,5 @@ parse_git_dirty() {
     echo ""
   fi
 }
-export PS1="\[\e[1;34m\]\u\[\e[1;37m\]|\[\e[1;32m\]\w\[\e[33m\]\$(parse_git_branch)\[\e[1;37m\]\$\[\e[m\] "
 
-alias l='ls -A'
-
-export EDITOR=vim
-export TERM=xterm-256color
-
-export PATH="$PATH":"$HOME/bin"
-
-# go
-export GOPATH="$HOME/src/go"
-export PATH="$PATH":"$GOPATH/bin"
-
-# clang
-export CC=clang
-export CXX=clang++
+echo "\[\e[1;34m\]\u\[\e[1;37m\]|\[\e[1;32m\]\w\[\e[33m\]\$(git_prompt)\[\e[1;37m\]\$\[\e[m\] "

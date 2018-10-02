@@ -41,15 +41,8 @@ add_default_dotfiles() {
   cp -r "$dotfiles_dir"/.config/* "$HOME/.config"
 }
 
-setup_sublime() {
-  printf "Setting up Sublime Text...\n"
-  wget https://packagecontrol.io/Package%20Control.sublime-package
-  mv "Package Control.sublime-package" "$HOME/.config/sublime-text-3/Installed Packages"
-}
-
 require clang git go subl terminator
 build_src_tree
 build_bin_dir
 add_default_dotfiles
-setup_sublime
 
