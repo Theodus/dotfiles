@@ -10,7 +10,7 @@ fi
 export PATH="$PATH":"$HOME/bin"
 export EDITOR=vim
 export TERM=xterm-256color
-export PS1=$(bash_prompt)
+export PS1="\[\e[1;34m\]\u\[\e[1;37m\]|\[\e[1;32m\]\w\[\e[33m\]\$(git-prompt.bash)\[\e[1;37m\]\$\[\e[m\] "
 ## clang
 export CC=clang
 export CXX=clang++

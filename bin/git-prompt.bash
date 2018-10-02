@@ -3,16 +3,6 @@
 set -e
 set -u
 
-git_prompt() {
-  BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
-  if [ ! "$BRANCH" = "" ]; then
-    STAT=$(parse_git_dirty)
-    echo "($BRANCH$STAT)"
-  else
-    echo ""
-  fi
-}
-
 parse_git_dirty() {
   status=$(git status 2>&1 | tee)
   dirty=$(echo -n "$status" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?")
@@ -47,4 +37,10 @@ parse_git_dirty() {
   fi
 }
 
-echo "\[\e[1;34m\]\u\[\e[1;37m\]|\[\e[1;32m\]\w\[\e[33m\]\$(git_prompt)\[\e[1;37m\]\$\[\e[m\] "
+BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+if [ ! "$BRANCH" = "" ]; then
+  STAT=$(parse_git_dirty)
+  echo "($BRANCH$STAT)"
+else
+  echo ""
+fi
