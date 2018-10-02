@@ -1,3 +1,10 @@
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+if [ -f /usr/share/defaults/etc/profile ]; then
+  source /usr/share/defaults/etc/profile
+fi
+
 # environment variables
 ## general
 export PATH="$PATH":"$HOME/bin"
