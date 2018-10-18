@@ -24,6 +24,8 @@ build_bin_dir() {
 add_dotfiles() {
   printf "Adding dotfiles...\n"
   cp -r .config/* "$HOME/.config"
+  cp .vimrc "$HOME/.vimrc"
+  cp .profile "$HOME/.profile"
 }
 
 require clang git go terminator
