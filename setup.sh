@@ -18,10 +18,16 @@ build_src_tree() {
 build_bin_dir() {
   printf "Adding bin files...\n"
   mkdir -p "$HOME/bin"
-  cp "$dotfiles_dir/bin/*" "$HOME/bin"
+  cp bin/* "$HOME/bin"
 }
 
-require clang git go subl terminator
+add_dotfiles() {
+  printf "Adding dotfiles...\n"
+  cp -r .config/* "$HOME/.config"
+}
+
+require clang git go terminator
 build_src_tree
 build_bin_dir
-# TODO: add dotfiles
+add_dotfiles
+
