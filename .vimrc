@@ -1,8 +1,10 @@
 set encoding=utf-8
-
 set visualbell " Blink cursor on error instead of beeping
+set nocompatible
+set mouse=a " enable mouse in all modes
 
-colorscheme murphy
+set background=dark
+colorscheme peachpuff
 
 set laststatus=2 " Status bar
 
