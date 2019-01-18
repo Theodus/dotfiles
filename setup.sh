@@ -1,12 +1,16 @@
 #!/bin/sh
 
 require() {
+  local err=false
   for cmd in "$@"; do
     if ! command -v "$cmd" >/dev/null; then
       printf "%s %s\n" "$cmd" "command required!"
-      exit 1
+      err=true
     fi
   done
+  if [ "$err" = true ]; then
+    exit 1
+  fi
 }
 
 build_src_tree() {
@@ -24,11 +28,10 @@ build_bin_dir() {
 add_dotfiles() {
   printf "Adding dotfiles...\n"
   cp -r .config/* "$HOME/.config"
-  cp .vimrc "$HOME/.vimrc"
-  cp .profile "$HOME/.profile"
+  cp .gitconfig .profile .tmux.conf .vimrc "$HOME"
 }
 
-require clang git go terminator
+require clang git go
 build_src_tree
 build_bin_dir
 add_dotfiles
