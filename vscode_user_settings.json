@@ -1,4 +1,5 @@
 {
+  "editor.formatOnSave": true,
   "editor.rulers": [60, 80],
   "editor.tabSize": 2,
   "window.zoomLevel": 0,
