@@ -28,7 +28,7 @@ build_bin_dir() {
 add_dotfiles() {
   printf "Adding dotfiles...\n"
   cp -r .config/* "$HOME/.config"
-  cp .gitconfig .profile .tmux.conf .vimrc "$HOME"
+  cp .clang-format .gitconfig .profile .tmux.conf .vimrc "$HOME"
 }
 
 require clang git go
