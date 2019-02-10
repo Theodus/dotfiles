@@ -27,9 +27,13 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls --color=auto'
 
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
+## confirm before overwriting something
+alias cp="cp -i"
+## human-readable sizes
+alias df="df -h"
+## show sizes in MB
+alias free="free -m"
+
 alias more=less
 
 alias grep='grep --color=auto'
@@ -56,9 +60,7 @@ shopt -s autocd
 ## check the window size after each command
 shopt -s checkwinsize
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+# enable programmable completion features
 if ! shopt -oq posix; then
   if [ -r /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
