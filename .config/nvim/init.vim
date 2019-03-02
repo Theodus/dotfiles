@@ -17,9 +17,7 @@ set shiftwidth=2
 set tabstop=2
 
 call plug#begin()
-
 Plug 'arcticicestudio/nord-vim'
-
 call plug#end()
 
 colorscheme nord

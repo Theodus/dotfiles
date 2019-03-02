@@ -13,6 +13,11 @@ require() {
   fi
 }
 
+install_tmux_tpm() {
+  printf "Installing Tmux Plugin Manager\n"
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+}
+
 install_nvim_plug() {
   printf "Installing nvim plug...\n"
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -21,22 +26,23 @@ install_nvim_plug() {
 
 build_src_tree() {
   printf "Building source tree...\n"
-  mkdir -p "$HOME/src/theodus"
-  mkdir -p "$HOME/src/go"
+  mkdir -p ~/src/theodus
+  mkdir -p ~/src/go
 }
 
 build_bin_dir() {
   printf "Adding bin files...\n"
-  mkdir -p "$HOME/bin"
-  cp bin/* "$HOME/bin"
+  mkdir -p ~/bin
+  cp bin/* ~/bin
 }
 
 add_dotfiles() {
   printf "Adding dotfiles...\n"
-  cp -r .* "$HOME"
+  cp -r .* ~
 }
 
 require clang git go nvim
+install_tmux_tpm
 install_nvim_plug
 build_src_tree
 build_bin_dir
