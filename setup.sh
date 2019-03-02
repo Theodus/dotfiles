@@ -13,6 +13,12 @@ require() {
   fi
 }
 
+install_nvim_plug() {
+  printf "Installing nvim plug...\n"
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+}
+
 build_src_tree() {
   printf "Building source tree...\n"
   mkdir -p "$HOME/src/theodus"
@@ -27,11 +33,11 @@ build_bin_dir() {
 
 add_dotfiles() {
   printf "Adding dotfiles...\n"
-  cp -r .config/* "$HOME/.config"
-  cp .clang-format .gitconfig .profile .tmux.conf .vimrc "$HOME"
+  cp -r .* "$HOME"
 }
 
-require clang git go
+require clang git go nvim
+install_nvim_plug
 build_src_tree
 build_bin_dir
 add_dotfiles
