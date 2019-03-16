@@ -41,12 +41,20 @@ add_dotfiles() {
   cp -r bin .config .gitconfig .profile .tmux.conf .clang-format ~
 }
 
-require clang git go nvim
+set_compilers() {
+  printf "Setting cc, c++, ld ...\n"
+  sudo ln -s -f /usr/bin/clang /usr/bin/cc
+  sudo ln -s -f /usr/bin/clang++ /usr/bin/c++
+  sudo ln -s -f /usr/bin/ld.lld /usr/bin/ld
+}
+
+require clang lld lldb clang-format git go nvim
 install_tmux_tpm
 install_nvim_plug
 build_src_tree
 build_bin_dir
 add_dotfiles
+set_compilers
 
 echo "nvim: run :PlugInstall"
 echo "tmux: run prefix + i"
