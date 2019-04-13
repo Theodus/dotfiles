@@ -1,14 +1,14 @@
 #!/bin/sh
 
 require() {
-  local err=false
+  err=false
   for cmd in "$@"; do
     if ! command -v "$cmd" >/dev/null; then
       printf "%s %s\n" "$cmd" "command required!"
       err=true
     fi
   done
-  if [ "$err" = true ]; then
+  if [ $err = true ]; then
     exit 1
   fi
 }
@@ -57,5 +57,5 @@ add_dotfiles
 set_compilers
 
 echo "nvim: run :PlugInstall"
-echo "tmux: run prefix + i"
+echo "tmux: run prefix + I"
 

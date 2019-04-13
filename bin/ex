@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 set -u
 
-if [[ $# < 2 ]]; then
+if [ $# -lt 1 ]; then
   echo "extract a file"
   echo "usage: $0 target"
   exit 1
@@ -11,20 +11,20 @@ fi
 
 target=$1
 
-if [ -f $target ]; then
+if [ -f "$target" ]; then
   case $target in
-    *.tar.bz2) tar xjf $target ;;
-    *.tar.gz) tar xzf $target ;;
-    *.bz2) bunzip2 $target ;;
-    *.rar) unrar x $target ;;
-    *.gz) gunzip $target ;;
-    *.tar) tar xf $target ;;
-    *.tbz2) tar xjf $target ;;
-    *.tgz) tar xzf $target ;;
-    *.zip) unzip $target ;;
-    *.Z) uncompress $target ;;
-    *.7z) 7z x $target ;;
-    * echo "'$target' cannot be extracted via ex" ;;
+    *.tar.bz2) tar xjf "$target" ;;
+    *.tar.gz) tar xzf "$target" ;;
+    *.bz2) bunzip2 "$target" ;;
+    *.rar) unrar x "$target" ;;
+    *.gz) gunzip "$target" ;;
+    *.tar) tar xf "$target" ;;
+    *.tbz2) tar xjf "$target" ;;
+    *.tgz) tar xzf "$target" ;;
+    *.zip) unzip "$target" ;;
+    *.Z) uncompress "$target" ;;
+    *.7z) 7z x "$target" ;;
+    *) echo "'$target' cannot be extracted via ex" ;;
   esac
 else
   echo "'$target' is not a valid file"
