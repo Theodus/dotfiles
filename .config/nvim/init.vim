@@ -10,6 +10,13 @@ endif
 
 set background=dark
 
+set number
+set showmatch
+
+" Case insensitive search unless it contains a capital letter
+set ignorecase
+set smartcase
+
 set expandtab
 set autoindent
 set softtabstop=2
