@@ -38,7 +38,10 @@ build_bin_dir() {
 
 add_dotfiles() {
   printf "Adding dotfiles...\n"
-  cp -r bin .config .gitconfig .profile .tmux.conf .clang-format ~
+  cp -r \
+    bin dockerfiles \
+    .config .gitconfig .profile .tmux.conf .clang-format \
+    ~
 }
 
 set_compilers() {
@@ -54,6 +57,7 @@ install_nvim_plug
 build_src_tree
 build_bin_dir
 add_dotfiles
+add_dockerfiles
 set_compilers
 
 echo "nvim: run :PlugInstall"
