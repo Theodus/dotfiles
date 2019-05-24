@@ -10,10 +10,33 @@
   "files.eol": "\n",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "[latex]": {
-    "editor.wordWrap": "on",
+  "editor.wordWrap": "on",
+  "terminal.integrated.fontWeight": "bold",
+  "editor.fontSize": 15,
+  "files.associations": {
+    "*.jacl": "clojure",
   },
-  "[markdown]": {
-    "editor.wordWrap": "on",
+  "workbench.colorCustomizations": {
+    "editor.background": "#040410",
+    "editor.lineHighlightBackground": "#14141a",
   },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "punctuation.definition.comment",
+          "variable.language",
+          "entity.name.type",
+        ],
+        "settings": {
+          "fontStyle": "",
+        }
+      }
+    ]
+  },
+  "C_Cpp.clang_format_fallbackStyle": "none",
+  "C_Cpp.default.intelliSenseMode": "clang-x64",
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+  "workbench.colorTheme": "Monokai",
 }
