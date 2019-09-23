@@ -11,12 +11,15 @@ export PATH="$HOME/bin:$PATH"
 export EDITOR="vim"
 export TERM="xterm-256color"
 export PS1="\[\e[1;34m\]\u\[\e[1;37m\]|\[\e[1;32m\]\w\[\e[33m\]\$(git-prompt.bash)\[\e[1;37m\]\$\[\e[m\] "
+## pony
+export PATH="$HOME/.pony/ponyup/bin:$PATH"
 ## clang
 export CC="clang"
 export CXX="clang++"
 ## go
 export GOPATH="$HOME/src/go"
 export PATH="$GOPATH/bin:$PATH"
+export CGO_LDFLAGS=-fuse-ld=gold
 ## better yaourt colors
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
