@@ -23,6 +23,9 @@ set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 
+set undodir=~/.vimundo
+set undofile
+
 call plug#begin()
 Plug 'arcticicestudio/nord-vim'
 call plug#end()

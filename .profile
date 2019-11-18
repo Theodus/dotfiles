@@ -29,7 +29,7 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 ## TODO: -G for color on BSD/MacOS
 alias l="ls -CF"
 alias la="ls -A"
-alias ll="ls -alF"
+alias ll="ls -alhF"
 alias ls="ls --color=auto"
 
 ## confirm before overwriting something
