@@ -20,6 +20,8 @@ export CXX="clang++"
 export GOPATH="$HOME/src/go"
 export PATH="$GOPATH/bin:$PATH"
 export CGO_LDFLAGS=-fuse-ld=gold
+## rust
+export PATH="/home/theodus/.cargo/bin:$PATH"
 ## idris2
 export PATH="$HOME/.idris2/bin:$PATH"
 ## better yaourt colors
