@@ -1,0 +1,74 @@
+# sxhkd
+## reload config
+super + alt + Escape
+	pkill -USR1 -x sxhkd
+
+# terminal emulator
+super + Return
+	alacritty
+
+# bspwm
+## quit bspwm
+super + alt + q
+	bspc quit 1 && pkill polybar
+## restart bspwm
+super + alt + r
+	bspc wm -r
+## close and kill
+super + {_,shift + }w
+	bspc node -{c,k}
+## node focus direction
+super + {Left,Down,Up,Right}
+	bspc node -f {west,south,north,east}
+## node swap direction
+super + shift + {Left,Down,Up,Right}
+	bspc node -s {west,south,north,east}
+## node preselect direction
+super + ctrl + {Left,Down,Up,Right}
+	bspc node -p {west,south,north,east}
+## node preselect cancel
+super + ctrl + space
+	bspc node -p cancel
+## node expand
+super + alt + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+## node contract
+super + alt + shift + {Left,Down,Up,Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+## node focus cycle
+super + {_,shift + }c
+	bspc node -f {next,prev}.local
+## node toggle monocle
+super + f
+	bspc desktop -l next
+## swap the current node and the biggest node
+super + g
+	bspc node -s biggest
+
+
+# set the window state
+#super + {t,shift + t,s,f}
+#	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+#super + ctrl + {m,x,y,z}
+#	bspc node -g {marked,locked,sticky,private}
+
+# focus the older or newer node in the focus history
+#super + {o,i}
+#	bspc wm -h off; \
+#	bspc node {older,newer} -f; \
+#	bspc wm -h on
+
+# focus or send to the given desktop
+#super + {_,shift + }{1-9,0}
+#	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# preselect the ratio
+#super + ctrl + {1-9}
+#	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused desktop
+#super + ctrl + shift + space
+#	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+

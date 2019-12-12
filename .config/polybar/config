@@ -1,0 +1,7 @@
+[bar/example]
+modules-center = date
+
+[module/date]
+type = internal/date
+date = %Y-%m-%d
+
