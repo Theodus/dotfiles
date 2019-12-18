@@ -12,7 +12,7 @@ export EDITOR="nvim"
 export TERM="xterm-256color"
 export PS1="\[\e[1;34m\]\u\[\e[1;37m\]|\[\e[1;32m\]\w\[\e[33m\]\$(git-prompt.bash)\[\e[1;37m\]\$\[\e[m\] "
 ## pony
-export PATH="$HOME/.pony/ponyup/bin:$PATH"
+export PATH="$HOME/.local/share/ponyup/bin:$PATH"
 ## clang
 export CC="clang"
 export CXX="clang++"
@@ -48,8 +48,6 @@ alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
 alias wget="wget -c"
-
-alias vim="nvim"
 
 complete -cf sudo
 
