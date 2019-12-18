@@ -1,5 +1,5 @@
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+[[ $- != *i* ]] && return
 
 if [ -r /usr/share/defaults/etc/profile ]; then
   . /usr/share/defaults/etc/profile
