@@ -8,9 +8,8 @@ fi
 # environment variables
 ## general
 export PATH="$HOME/bin:$PATH"
+if [ "$TERM" != linux ]; then export TERM="xterm-256color"; fi
 export EDITOR="nvim"
-export TERM="xterm-256color"
-export PS1="\[\e[1;34m\]\u\[\e[1;37m\]|\[\e[1;32m\]\w\[\e[33m\]\$(git-prompt.bash)\[\e[1;37m\]\$\[\e[m\] "
 ## pony
 export PATH="$HOME/.local/share/ponyup/bin:$PATH"
 ## clang
@@ -28,50 +27,37 @@ export PATH="$HOME/.idris2/bin:$PATH"
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
 # aliases
+alias more="less"
+alias wget="wget -c"
+## ls
 ## TODO: -G for color on BSD/MacOS
 alias l="ls -CF"
 alias la="ls -A"
 alias ll="ls -alhF"
 alias ls="ls --color=auto"
-
 ## confirm before overwriting something
 alias cp="cp -i"
 ## human-readable sizes
 alias df="df -h"
 ## show sizes in MB
 alias free="free -m"
-
-alias more="less"
-
+## grep
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
-alias wget="wget -c"
-
 complete -cf sudo
 
-# history
-HISTSIZE=5000
-HISTFILESIZE=10000
-## don't put duplicate lines in the history.
-HISTCONTROL=ignoredups
-## append to the history file, don't overwrite it
-shopt -s histappend
-
 # options
-## disable ctrl-s and ctrl-q
-stty -ixon
 ## cd without cd
 shopt -s autocd
 ## check the window size after each command
 shopt -s checkwinsize
+# history
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+## don't put duplicate lines in the history.
+export HISTCONTROL=ignoredups
+## append to the history file, don't overwrite it
+shopt -s histappend
 
-# enable programmable completion features
-if ! shopt -oq posix; then
-  if [ -r /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -r /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
