@@ -14,7 +14,7 @@ require() {
 }
 
 install_tmux_tpm() {
-  printf "Installing Tmux Plugin Manager\n"
+  printf "Installing Tmux Plugin Manager...\n"
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
 
@@ -24,24 +24,11 @@ install_nvim_plug() {
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
-build_src_tree() {
-  printf "Building source tree...\n"
-  mkdir -p ~/src/theodus
-  mkdir -p ~/src/go
-}
-
-build_bin_dir() {
-  printf "Adding bin files...\n"
-  mkdir -p ~/bin
-  cp bin/* ~/bin
-}
-
 add_dotfiles() {
   printf "Adding dotfiles...\n"
-  cp -r \
-    bin dockerfiles \
-    .config .gitconfig .profile .tmux.conf .clang-format \
-    ~
+  cp -r home/* "$HOME"
+  mkdir -p "$HOME/src/theodus"
+  mkdir -p "/src/go"
 }
 
 set_compilers() {
@@ -54,10 +41,7 @@ set_compilers() {
 require clang lld lldb clang-format git go nvim
 install_tmux_tpm
 install_nvim_plug
-build_src_tree
-build_bin_dir
 add_dotfiles
-add_dockerfiles
 set_compilers
 
 echo "nvim: run :PlugInstall"
