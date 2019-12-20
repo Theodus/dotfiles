@@ -1,0 +1,32 @@
+#ionicons         
+panel_height='25'
+mainfont='Droid Sans Mono Slashed for Powerline:size=13:antialias=true'
+iconfont="TerminessTTF Nerd Font:size=15:antialias=true"
+thirdfont="TerminessTTF Nerd Font:size=16:antialias=true"
+#thirdfont="Ionicons:size=16:antialias=false"
+gap=10
+main_menu="rofimenu"
+networkmenu="networkmenu.sh"
+wifi_indicator=true
+menu_icon=
+charging_icon=
+battery_full_icon=
+battery_draining_icon=
+battery_half_icon=
+battery_low_icon=
+time_icon=
+wired_icon="<->"
+disconnected_icon=
+#
+muted_icon=
+#
+unmuted_icon=
+title_length=80
+COLOR_FOCUSED_DESKTOP_FG='#1ABB9B'
+COLOR_FOCUSED_DESKTOP_BG="#292f34"
+COLOR_DESKTOP_FG='#F6F9FF'
+COLOR_DESKTOP_BG="#292f34"
+DARKGREY="%{F#707880}"
+RED="%{F#A54242}"
+update_interval=3
+systemtray=0
