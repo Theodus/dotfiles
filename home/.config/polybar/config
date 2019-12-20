@@ -1,7 +1,18 @@
-[bar/example]
+[bar/top]
+width = 100%
+height = 25
+override-redirect = true
 modules-center = date
+font-0 = "Droid Sans Mono Slashed for Powerline:size=13:antialias=true:size=14;2"
+font-1 = "TerminessTTF Nerd Font:size=14:antialias=true:weight=bold;2"
+background = "#FF292f34"
 
 [module/date]
 type = internal/date
+time = %H:%M
 date = %Y-%m-%d
+time-alt = %H:%M:%S
+date-alt = %Y-%m-%d
+label = %date% | %time%
+; 
 
