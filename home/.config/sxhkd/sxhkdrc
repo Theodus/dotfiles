@@ -1,11 +1,11 @@
 # sxhkd
-## reload config
+## reload configs
 super + alt + Escape
 	pkill -USR1 -x sxhkd
 
-# run applications
+# run applications, TODO: toggle
 super + space
-  dmenu_recent -fn 'xos4 Terminus:size=15' -i -l 14 -w 600 -y $PANEL_HEIGHT
+  launcher.sh
 
 # terminal emulator
 super + Return

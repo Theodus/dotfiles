@@ -2,17 +2,50 @@
 width = 100%
 height = 25
 override-redirect = true
+modules-left = menu bspwm
 modules-center = date
-font-0 = "Droid Sans Mono Slashed for Powerline:size=13:antialias=true:size=14;2"
+modules-right = cpu
+font-0 = "Droid Sans Mono Slashed for Powerline:size=13:antialias=true;2"
 font-1 = "TerminessTTF Nerd Font:size=14:antialias=true:weight=bold;2"
-background = "#FF292f34"
+background = #292F34
+foreground = #B6B9BF
+
+[module/menu]
+type = custom/menu
+label-open = " "
+format-foreground = #1ABB9B 
+
+[module/bspwm]
+type = internal/bspwm
+label-focused-foreground = #1ABB9B
+label-focused-underline = #1ABB9B
+label-occupied-underline = #292F34
+label-urgent-foreground = #FB5B6B
+label-empty = 
 
 [module/date]
 type = internal/date
-time = %H:%M
+label = %date% | %time%
+time = "%H:%M   "
 date = %Y-%m-%d
 time-alt = %H:%M:%S
 date-alt = %Y-%m-%d
-label = %date% | %time%
 ; 
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = %{F#1ABB9B} <label> <ramp-coreload> %{F-}
+label = CPU %percentage:2%%
+ramp-coreload-spacing = 1
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+; TODO: memory
 
