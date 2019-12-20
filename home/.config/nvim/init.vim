@@ -28,6 +28,7 @@ set undofile
 
 call plug#begin()
 Plug 'arcticicestudio/nord-vim'
+Plug 'lilydjwg/colorizer'
 call plug#end()
 
 colorscheme nord
