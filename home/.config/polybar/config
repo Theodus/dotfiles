@@ -47,5 +47,5 @@ ramp-coreload-5 = ▆
 ramp-coreload-6 = ▇
 ramp-coreload-7 = █
 
-; TODO: memory
+; TODO: network, audio, power/logout, battery, dropbox, caffeine, memory
 

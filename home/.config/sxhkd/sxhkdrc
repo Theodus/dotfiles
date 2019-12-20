@@ -7,6 +7,10 @@ super + alt + Escape
 super + space
   launcher.sh
 
+# lock screen
+super + l
+  i3lock -i $HOME/.config/i3lock/lockscreen.png
+
 # terminal emulator
 super + Return
 	alacritty

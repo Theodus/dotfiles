@@ -1,0 +1,6 @@
+bspwm-manjaro
+dmenu-manjaro
+feh
+i3lock
+polybar
+
