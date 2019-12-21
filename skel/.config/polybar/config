@@ -6,7 +6,7 @@ modules-left = menu bspwm
 modules-center = date
 modules-right = cpu
 font-0 = "Droid Sans Mono Slashed for Powerline:size=13:antialias=true;2"
-font-1 = "TerminessTTF Nerd Font:size=14:antialias=true:weight=bold;2"
+font-1 = "NotoSansMono Nerd Font:size=14:antialias=true:weight=bold;2"
 background = #292F34
 foreground = #B6B9BF
 
