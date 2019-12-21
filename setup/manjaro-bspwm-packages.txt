@@ -1,6 +1,6 @@
-bspwm-manjaro
-dmenu-manjaro
+bspwm
 feh
 i3lock
+lxappearance
 polybar
 
