@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 export PANEL_HEIGHT=25
 export GAP=10
@@ -25,7 +25,4 @@ bspc config normal_border_color "#222D32"
 bspc config presel_border_color "#1ABB9B"
 bspc config border_width 1
 #bspc config focus_follows_pointer = true
-
-sxhkd &
-$HOME/.config/polybar/launch.sh &
 
