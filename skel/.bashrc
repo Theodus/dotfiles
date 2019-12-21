@@ -7,15 +7,14 @@ stty -ixon
 
 export VISUAL=$EDITOR
 export TERMINAL=/usr/bin/alacritty
-export PANEL_FIFO="/tmp/panel-fifo"
-export XDG_CONFIG_HOME="$HOME/.config"
-export BSPWM_SOCKET="/tmp/bspwm-socket"
-export PANEL_HEIGHT=25
-export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
+#export PANEL_FIFO="/tmp/panel-fifo"
+#export XDG_CONFIG_HOME="$HOME/.config"
+#export BSPWM_SOCKET="/tmp/bspwm-socket"
+#export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
 #export GUI_EDITOR=/usr/bin/micro-st
 #export BROWSER=/usr/bin/links-launch
-export QT_QPA_PLATFORMTHEME="qt5ct"
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+#export QT_QPA_PLATFORMTHEME="qt5ct"
+#export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # bash completion
 if ! shopt -oq posix; then
