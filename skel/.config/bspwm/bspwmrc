@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PANEL_HEIGHT=25
+export PANEL_HEIGHT=30
 export GAP=10
 
 # remove gaps from edes
@@ -25,4 +25,6 @@ bspc config normal_border_color "#222D32"
 bspc config presel_border_color "#1ABB9B"
 bspc config border_width 1
 #bspc config focus_follows_pointer = true
+
+$HOME/.config/bspwm/autostart.sh
 
