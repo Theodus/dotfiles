@@ -15,20 +15,20 @@ require() {
 
 install_tmux_tpm() {
   printf "Installing Tmux Plugin Manager...\n"
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 }
 
 install_nvim_plug() {
   printf "Installing nvim plug...\n"
-  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+  curl -fLo "$HOME/.local/share/nvim/site/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 add_dotfiles() {
   printf "Adding dotfiles...\n"
-  cp -r home/* "$HOME"
+  cp -rT skel "$HOME"
   mkdir -p "$HOME/src/theodus"
-  mkdir -p "/src/go"
+  mkdir -p "$HOME/src/go"
 }
 
 set_compilers() {
@@ -38,7 +38,7 @@ set_compilers() {
   sudo ln -s -f /usr/bin/ld.lld /usr/bin/ld
 }
 
-require clang lld lldb clang-format git go nvim
+require clang clang-format git go lld lldb nvim tmux
 install_tmux_tpm
 install_nvim_plug
 add_dotfiles
