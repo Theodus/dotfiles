@@ -38,7 +38,7 @@ set_compilers() {
   sudo ln -s -f /usr/bin/ld.lld /usr/bin/ld
 }
 
-require clang clang-format git go lld lldb nvim tmux
+require clang clang-format git go lld lldb nvim rg tmux
 install_tmux_tpm
 install_nvim_plug
 add_dotfiles
