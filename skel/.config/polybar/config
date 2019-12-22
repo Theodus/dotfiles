@@ -2,17 +2,16 @@
 width = 100%
 height = 30
 override-redirect = true
-modules-left = menu bspwm
-modules-center = date
-modules-right = cpu
+modules-left = menu date bspwm 
+modules-right = cpu memory battery
 font-0 = Droid Sans Mono Slashed for Powerline:size=16:antialias=true;2
-font-1 = NotoSansMono Nerd Font:size=16:antialias=true:weight=bold;2
+font-1 = NotoSansMono Nerd Font:size=16:antialias=true:weight=bold;3
 background = #292F34
 foreground = #B6B9BF
 
 [module/menu]
 type = custom/menu
-label-open = " "
+label-open = "  "
 format-foreground = #1ABB9B 
 
 [module/bspwm]
@@ -25,8 +24,8 @@ label-empty =
 
 [module/date]
 type = internal/date
-label = %date% | %time%
-time = "%H:%M   "
+label = "%date% | %time% | "
+time = %H:%M
 date = %Y-%m-%d
 time-alt = %H:%M:%S
 date-alt = %Y-%m-%d
@@ -47,5 +46,29 @@ ramp-coreload-5 = ▆
 ramp-coreload-6 = ▇
 ramp-coreload-7 = █
 
-; TODO: network, audio, power/logout, battery, dropbox, caffeine, memory
+[module/memory]
+type = internal/memory
+format = "| <label> | "
+interval = 0.5
+label = RAM %percentage_used:2%% (%gb_used%)
+
+[module/battery]
+type = internal/battery
+;format-underline = #1ABB9B
+format-discharging = " <ramp-capacity> <label-discharging> "
+format-charging = " <ramp-capacity> <label-charging> "
+format-full = " <ramp-capacity> <label-full> "
+;full-at = 99
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = ADP1
+poll-interval = 5
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+; TODO: network, audio, power/logout, dropbox, caffeine
 
