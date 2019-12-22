@@ -1,0 +1,12 @@
+C/C++
+Clang-Format
+CMake
+Code Spell Checker
+F* Syntax Highlighting
+LaTeX Workshop
+Magic Racket
+Markdown Preview Enhanced
+OCaml
+shellcheck
+vsfstar
+
