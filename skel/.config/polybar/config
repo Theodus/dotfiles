@@ -3,7 +3,7 @@ width = 100%
 height = 30
 override-redirect = true
 modules-left = menu date bspwm 
-modules-right = cpu memory battery
+modules-right = cpu memory paudio battery
 font-0 = Droid Sans Mono Slashed for Powerline:size=16:antialias=true;2
 font-1 = NotoSansMono Nerd Font:size=16:antialias=true:weight=bold;3
 background = #292F34
@@ -34,7 +34,7 @@ date-alt = %Y-%m-%d
 [module/cpu]
 type = internal/cpu
 interval = 0.5
-format = %{F#1ABB9B} <label> <ramp-coreload> %{F-}
+format = "<label> %{F#1ABB9B}<ramp-coreload>%{F-} | "
 label = CPU %percentage:2%%
 ramp-coreload-spacing = 1
 ramp-coreload-0 = ▁
@@ -48,13 +48,25 @@ ramp-coreload-7 = █
 
 [module/memory]
 type = internal/memory
-format = "| <label> | "
 interval = 0.5
-label = RAM %percentage_used:2%% (%gb_used%)
+label = "RAM %percentage_used:2%% (%gb_used%) | "
+
+[module/paudio]
+type = internal/alsa
+; find sink using `pacmd list-sinks`, name field
+;sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+use-ui-max = true
+format-volume = "<ramp-volume> <label-volume> | "
+label-muted = "  0% | "
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+click-right = exec pavucontrol &
 
 [module/battery]
 type = internal/battery
-;format-underline = #1ABB9B
 format-discharging = " <ramp-capacity> <label-discharging> "
 format-charging = " <ramp-capacity> <label-charging> "
 format-full = " <ramp-capacity> <label-full> "
