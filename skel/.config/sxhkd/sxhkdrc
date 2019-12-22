@@ -5,15 +5,19 @@ super + alt + Escape
 
 # run applications, TODO: toggle
 super + space
-  launcher.sh
+  budgie-run-dialog
 
 # lock screen
 super + l
-  i3lock -i $HOME/.config/i3lock/lockscreen.png
+  i3lock -i $HOME/.config/bspwm/lockscreen.png
 
 # terminal emulator
 super + Return
 	alacritty
+
+# browser
+super + b
+  brave
 
 # bspwm
 ## quit bspwm
