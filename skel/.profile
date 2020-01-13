@@ -26,8 +26,9 @@ export PATH="$HOME/.idris2/bin:$PATH"
 ## ocaml
 if hash opam 2>/dev/null; then eval $(opam env); fi
 ## f*
-export PATH="$HOME/src/theodus/FStar/bin:$PATH"
-export KREMLIN_HOME="$HOME/src/FStarLang/kremlin"
+export FSTAR_HOME="$HOME/src/theodus/FStar"
+export KREMLIN_HOME="$HOME/src/theodus/kremlin"
+export PATH="$FSTAR_HOME/bin:$KREMLIN_HOME:$PATH"
 ## firrtl
 export PATH="$HOME/src/freechipsproject/firrtl/utils/bin:$PATH"
 ## better yaourt colors
