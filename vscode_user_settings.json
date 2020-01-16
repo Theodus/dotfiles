@@ -12,7 +12,8 @@
   "files.insertFinalNewline": true,
   "editor.wordWrap": "on",
   "terminal.integrated.fontWeight": "bold",
-  "editor.fontSize": 15,
+  "editor.fontFamily": "JetBrains Mono Medium",
+  "editor.fontSize": 17,
   "files.associations": {
     "*.jacl": "clojure",
     "*.h": "c"
@@ -46,6 +47,8 @@
           "entity.name.class",
           "entity.name.function",
           "entity.name.method",
+          "entity.name.namespace",
+          "entity.name.scope-resolution",
           "entity.name.section",
           "entity.name.selector",
           "entity.name.tag",
@@ -86,6 +89,7 @@
           "meta.class",
           "meta.function",
           "meta.function-call",
+          "meta.parameter.cpp",
           "meta.preprocessor",
           "meta.return-type",
           "meta.selector",
@@ -140,10 +144,14 @@
   "C_Cpp.intelliSenseEngineFallback": "Enabled",
   "go.buildOnSave": "off",
   "cSpell.userWords": [
+    "behaviour",
+    "behaviours",
+    "clebsch",
     "drexel",
     "idris",
     "implicits",
     "microcontroller",
+    "struct",
     "toolchain",
     "uninit",
     "untrusted",
@@ -151,7 +159,9 @@
   ],
   "workbench.startupEditor": "newUntitledFile",
   "idris.warnPartial": true,
-  "idris.numbersOfContinuousTypechecking": 2,
   "idris.executablePath": "idris2",
+  "idris.hoverMode": "fallback",
+  "idris.suggestMode": "allWords",
+  "idris.showOutputWhenTypechecking": false,
+  "idris.numbersOfContinuousTypechecking": 10,
 }
-
