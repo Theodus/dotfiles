@@ -18,6 +18,7 @@
     "*.jacl": "clojure",
     "*.h": "c"
   },
+  "telemetry.enableTelemetry": false,
   "workbench.colorCustomizations": {
     "editor.background": "#080808",
     "editor.lineHighlightBackground": "#101010"
