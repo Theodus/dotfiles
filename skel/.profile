@@ -57,8 +57,6 @@ alias fgrep="fgrep --color=auto"
 complete -cf sudo
 
 # options
-## cd without cd
-shopt -s autocd
 ## check the window size after each command
 shopt -s checkwinsize
 # history
