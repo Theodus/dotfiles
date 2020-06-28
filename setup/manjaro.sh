@@ -27,6 +27,7 @@ install_nvim_plug() {
 add_dotfiles() {
   printf "Adding dotfiles...\n"
   cp -rT skel "$HOME"
+  cp -rT skel-manjaro "$HOME"
   mkdir -p "$HOME/src/theodus"
   mkdir -p "$HOME/src/go"
 }
