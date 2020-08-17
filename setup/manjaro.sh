@@ -29,7 +29,6 @@ add_dotfiles() {
   cp -rT skel "$HOME"
   cp -rT skel-manjaro "$HOME"
   mkdir -p "$HOME/src/theodus"
-  mkdir -p "$HOME/src/go"
 }
 
 set_compilers() {
