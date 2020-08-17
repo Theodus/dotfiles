@@ -5,20 +5,24 @@ if [ -r /usr/share/defaults/etc/profile ]; then
   . /usr/share/defaults/etc/profile
 fi
 
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach -t default || tmux new -s default
+fi
+
 # environment variables
 ## general
 export PATH="$HOME/bin:$PATH"
 if [ "$TERM" != linux ]; then export TERM="xterm-256color"; fi
 export EDITOR="nvim"
-## pony
-export PATH="$HOME/.local/share/ponyup/bin:$PATH"
 ## clang
 export CC="clang"
 export CXX="clang++"
 ## go
-export GOPATH="$HOME/src/go"
-export PATH="$GOPATH/bin:$PATH"
+# export GOPATH="$HOME/src/go"
+# export PATH="$GOPATH/bin:$PATH"
 export CGO_LDFLAGS=-fuse-ld=gold
+## pony
+export PATH="$HOME/.local/share/ponyup/bin:$PATH"
 ## rust
 export PATH="/home/theodus/.cargo/bin:$PATH"
 ## idris2

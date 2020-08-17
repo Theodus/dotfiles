@@ -39,12 +39,19 @@ set_compilers() {
   sudo ln -s -f /usr/bin/ld.lld /usr/bin/ld
 }
 
+install_fonts() {
+  printf "Installing fonts...\n"
+  mkdir -p ~/.local/share/fonts
+  cp "JetBrains Mono Medium Nerd Font Complete.ttf" ~/.local/share/fonts/
+  fc-cache
+}
+
 require clang clang-format git go lld lldb nvim rg tmux
 install_tmux_tpm
 install_nvim_plug
 add_dotfiles
 set_compilers
+install_fonts
 
 echo "nvim: run :PlugInstall"
 echo "tmux: run prefix + I"
-
