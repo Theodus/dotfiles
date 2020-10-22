@@ -24,7 +24,7 @@ export CGO_LDFLAGS=-fuse-ld=gold
 ## pony
 export PATH="$HOME/.local/share/ponyup/bin:$PATH"
 ## rust
-export PATH="/home/theodus/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 ## idris2
 export PATH="$HOME/.idris2/bin:$PATH"
 ## ocaml
