@@ -11,18 +11,20 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "editor.wordWrap": "on",
-  "editor.fontFamily": "JetBrains Mono Medium",
+  "editor.fontFamily": "'JuliaMono Medium', 'Jetbrains Mono Medium', monospace",
   "editor.fontSize": 18,
   "editor.fontLigatures": false,
   "files.associations": {
-    "*.jacl": "clojure",
     "*.h": "c"
   },
   "telemetry.enableTelemetry": false,
+  "workbench.colorTheme": "Monokai",
   "workbench.colorCustomizations": {
     "editor.background": "#080808",
     "editor.lineHighlightBackground": "#101010"
   },
+  "workbench.startupEditor": "newUntitledFile",
+  "zenMode.hideLineNumbers": false,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -137,11 +139,12 @@
       }
     ]
   },
+  "cSpell.enabled": false,
   "C_Cpp.clang_format_fallbackStyle": "none",
   "C_Cpp.default.intelliSenseMode": "clang-x64",
   "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-  "workbench.colorTheme": "Monokai",
   "C_Cpp.intelliSenseEngineFallback": "Enabled",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.cStandard": "c11",
   "go.buildOnSave": "off",
-  "workbench.startupEditor": "newUntitledFile",
 }

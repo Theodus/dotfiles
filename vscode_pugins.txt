@@ -7,6 +7,8 @@ LaTeX Workshop
 Magic Racket
 Markdown Preview Enhanced
 OCaml
+Rust
 shellcheck
+TOML Language Support
 vsfstar
 
