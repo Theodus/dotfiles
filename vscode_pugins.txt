@@ -2,13 +2,15 @@ C/C++
 Clang-Format
 CMake
 Code Spell Checker
-F* Syntax Highlighting
+Docker
 LaTeX Workshop
 Magic Racket
 Markdown Preview Enhanced
 OCaml
+PGN
+Rainbow CSV
+Remote - SSH
+RISC-V Support
 Rust
 shellcheck
 TOML Language Support
-vsfstar
-
