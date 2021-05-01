@@ -1,6 +1,0 @@
-bspwm
-feh
-i3lock
-lxappearance
-polybar
-
