@@ -56,5 +56,5 @@ set_compilers
 install_fonts
 install_tools
 
-echo "tmux: run `prefix + I`"
-echo "nvim: run `:PlugInstall`"
+echo "tmux: run prefix + I"
+echo "nvim: run :PlugInstall"
