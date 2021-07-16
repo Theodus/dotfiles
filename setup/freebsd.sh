@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. setup/common.sh
+
 # TODO: nvidia-driver?
 
 # Enable sudo for wheel group with visudo
@@ -29,27 +31,8 @@ EndSection
 ' | sudo tee /usr/local/etc/X11/xorg.conf.d/driver-nvidia.conf
 }
 
-add_dotfiles() {
-  printf "Adding dotfiles...\n"
-  cp -rn skel/. $HOME
-}
-
-install_tmux_tpm() {
-  printf "Installing Tmux Plugin Manager...\n"
-  git clone "https://github.com/tmux-plugins/tpm" \
-    "$HOME/.tmux/plugins/tpm"
-  echo "tmux: \`prefix + I\`"
-}
-
-install_nvim_plug() {
-  printf "Installing Neovim plug...\n"
-  curl -fLo "$HOME/.local/share/nvim/site/autoload/plug.vim" \
-    --create-dirs "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-  echo "nvim: \`:PlugInstall\`"
-}
-
 install_packages
 install_nvidia
-add_dotfiles
+add_dotfiles skel
 install_tmux_tpm
 install_nvim_plug
