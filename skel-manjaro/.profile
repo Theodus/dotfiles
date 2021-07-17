@@ -67,7 +67,7 @@ shopt -s checkwinsize
 export HISTSIZE=5000
 export HISTFILESIZE=10000
 ## don't put duplicate lines in the history.
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoredups:erasedups
 ## append to the history file, don't overwrite it
 shopt -s histappend
 
