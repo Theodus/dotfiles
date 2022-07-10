@@ -2,7 +2,6 @@
 
 set $theme /usr/share/sway/themes/matcha-green
 include $theme/definitions
-include /etc/sway/definitions
 include $HOME/.config/sway/definitions.d/*.conf
 
 include /etc/sway/inputs/*

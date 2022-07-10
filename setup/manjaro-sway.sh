@@ -7,7 +7,7 @@ sudo sed -Ei '/EnableAUR/s/^#//' /etc/pamac.conf
 sudo pacman -Syu && sudo pacman -Syyu
 pamac install --no-confirm \
   base-devel clang cmake lld llvm llvm-libs \
-  docker git neovim nvm ripgrep shellcheck \
+  alacritty docker git neovim nvm ripgrep shellcheck \
   nerd-fonts-jetbrains-mono ttf-juliamono \
   gammastep \
   brave-browser visual-studio-code-bin
