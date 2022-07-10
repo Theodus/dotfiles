@@ -9,6 +9,7 @@ export CGO_LDFLAGS=-fuse-ld=gold
 export PATH="$HOME/.idris2/bin:$PATH"
 ## js
 export PATH="$HOME/.yarn/bin:$PATH"
+source /usr/share/nvm/init-nvm.sh
 ## ocaml
 if hash opam 2>/dev/null; then eval $(opam env); fi
 ## pony

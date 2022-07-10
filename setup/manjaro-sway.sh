@@ -13,6 +13,8 @@ pamac install --no-confirm \
   brave-browser visual-studio-code-bin
 
 sudo usermod -aG docker "${USER}"
+nvm install 16
+npm install -g yarn
 
 printf "[_] Copy configs\n"
 cp -rT configs "${HOME}"
