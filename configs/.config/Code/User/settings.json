@@ -5,7 +5,7 @@
     80,
     100,
   ],
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
   "window.zoomLevel": 0,
   "files.autoSave": "onFocusChange",
   "files.eol": "\n",
