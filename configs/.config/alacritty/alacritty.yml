@@ -1,5 +1,5 @@
 window:
-  decorations: none
+  decorations: Full
   opacity: 0.85
   padding:
     x: 4
@@ -12,6 +12,10 @@ font:
     style: Regular
 
 draw_bold_text_with_bright_colors: true
+
+shell:
+  program: tmux
+  args: ['-l', '-c', 'tmux']
 
 colors:
   primary:
