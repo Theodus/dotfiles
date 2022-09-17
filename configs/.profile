@@ -1,37 +1,21 @@
 #!/bin/sh
 
-## clang
+# Clang
 export CC="clang"
 export CXX="clang++"
-## go
+# Go
 export CGO_LDFLAGS=-fuse-ld=gold
-## idris2
-export PATH="$HOME/.idris2/bin:$PATH"
-## js
-export PATH="$HOME/.yarn/bin:$PATH"
+# Idris2
+export PATH="${HOME}/.idris2/bin:${PATH}"
+# JS
+export PATH="${HOME}/.yarn/bin:${PATH}"
 source /usr/share/nvm/init-nvm.sh
-## ocaml
+# Ocaml
 if hash opam 2>/dev/null; then eval $(opam env); fi
-## pony
-export PATH="$HOME/.local/share/ponyup/bin:$PATH"
-## rust
-. "$HOME/.cargo/env"
+# Pony
+export PATH="${HOME}/.local/share/ponyup/bin:${PATH}"
+# Rust
+. "${HOME}/.cargo/env"
 
 export EDITOR=nvim
-export SHELL=/usr/bin/zsh
-export TERMINAL_COMMAND=/usr/share/sway/scripts/foot.sh
-
-export ZEIT_DB=~/.config/zeit.db
-
-export MOZ_ENABLE_WAYLAND=1
-export MOZ_DBUS_REMOTE=1
-export GTK_CSD=0
-
-export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME=qt5ct
-export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-
-#Java XWayland blank screens fix
-export _JAVA_AWT_WM_NONREPARENTING=1
-
-export $(gnome-keyring-daemon --start)
+# export SHELL=/usr/bin/zsh
