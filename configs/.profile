@@ -5,6 +5,8 @@ export CC="clang"
 export CXX="clang++"
 # Go
 export CGO_LDFLAGS=-fuse-ld=gold
+export GOPATH="${HOME}/src/go"
+export PATH="${GOPATH}/bin:${PATH}"
 # Idris2
 export PATH="${HOME}/.idris2/bin:${PATH}"
 # JS
