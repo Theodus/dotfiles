@@ -1,6 +1,6 @@
 window:
   decorations: Full
-  opacity: 0.85
+  opacity: 0.8
   padding:
     x: 4
     y: 4
@@ -11,12 +11,10 @@ font:
     family: JuliaMono Medium
     style: Regular
 
-draw_bold_text_with_bright_colors: true
-
 shell:
-  program: tmux
-  args: ['-l', '-c', 'tmux']
+  program: zellij
 
+draw_bold_text_with_bright_colors: true
 colors:
   primary:
     background: '0x000000'

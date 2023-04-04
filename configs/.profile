@@ -11,8 +11,6 @@ export PATH="${GOPATH}/bin:${PATH}"
 export PATH="${HOME}/.idris2/bin:${PATH}"
 # JS
 export PATH="${HOME}/.yarn/bin:${PATH}"
-export NVM_DIR="${HOME}/.nvm"
-source /usr/share/nvm/init-nvm.sh
 # Ocaml
 if hash opam 2>/dev/null; then eval $(opam env); fi
 # Pony

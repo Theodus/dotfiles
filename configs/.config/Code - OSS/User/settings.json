@@ -5,7 +5,7 @@
     80,
     100,
   ],
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "window.zoomLevel": 0,
   "files.autoSave": "onFocusChange",
   "files.eol": "\n",
@@ -26,6 +26,17 @@
   },
   "workbench.startupEditor": "newUntitledFile",
   "zenMode.hideLineNumbers": false,
+  "cSpell.enabled": false,
+  "C_Cpp.clang_format_fallbackStyle": "none",
+  "C_Cpp.default.intelliSenseMode": "clang-x64",
+  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+  "C_Cpp.intelliSenseEngineFallback": "Enabled",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.cStandard": "c11",
+  "go.buildOnSave": "off",
+  "[rust]": {
+    "editor.tabSize": 4,
+  },
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -139,13 +150,5 @@
         }
       }
     ]
-  },
-  "cSpell.enabled": false,
-  "C_Cpp.clang_format_fallbackStyle": "none",
-  "C_Cpp.default.intelliSenseMode": "clang-x64",
-  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-  "C_Cpp.intelliSenseEngineFallback": "Enabled",
-  "C_Cpp.default.cppStandard": "c++17",
-  "C_Cpp.default.cStandard": "c11",
-  "go.buildOnSave": "off",
+  }
 }
