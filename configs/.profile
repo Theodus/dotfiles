@@ -11,6 +11,8 @@ export PATH="${GOPATH}/bin:${PATH}"
 export PATH="${HOME}/.idris2/bin:${PATH}"
 # JS
 export PATH="${HOME}/.yarn/bin:${PATH}"
+export PATH="/home/theodus/.local/share/fnm:$PATH"
+eval "`fnm env`"
 # Ocaml
 if hash opam 2>/dev/null; then eval $(opam env); fi
 # Pony
@@ -20,3 +22,7 @@ export PATH="${HOME}/.local/share/ponyup/bin:${PATH}"
 
 export EDITOR=nvim
 export SHELL=/usr/bin/zsh
+
+alias code=vscodium
+alias la='ls -a'
+alias ll='ls -lah'
