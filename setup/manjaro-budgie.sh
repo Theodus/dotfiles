@@ -15,6 +15,9 @@ sudo usermod -a -G docker "${USER}"
 printf "[_] Installing rustup\n"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+printf "[_] Installing fnm\n"
+source "${HOME}/.cargo/env" && cargo install fnm
+
 printf "[_] Copy configs\n"
 cp -rT configs "${HOME}"
 
