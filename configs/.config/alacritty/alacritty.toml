@@ -1,0 +1,45 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "0x474747"
+blue = "0x00a0ff"
+cyan = "0x00ffff"
+green = "0x00ff00"
+magenta = "0xff00ff"
+red = "0xff0000"
+white = "0xffffff"
+yellow = "0xffff00"
+
+[colors.normal]
+black = "0x000000"
+blue = "0x1080ff"
+cyan = "0x00d7af"
+green = "0x00af00"
+magenta = "0xd700af"
+red = "0xaf0000"
+white = "0xeaeaea"
+yellow = "0xafd700"
+
+[colors.primary]
+background = "0x000000"
+foreground = "0xeaeaea"
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "JuliaMono Medium"
+style = "Regular"
+
+[shell]
+args = ["-l", "-c", "tmux"]
+program = "zsh"
+
+[window]
+decorations = "Full"
+opacity = 0.8
+
+[window.padding]
+x = 4
+y = 4
