@@ -1,4 +1,17 @@
-#!/bin/sh
+# Use powerline
+USE_POWERLINE="true"
+# Has weird character width
+# Example:
+#    is not a diamond
+HAS_WIDECHARS="false"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
 
 # Clang
 export CC="clang"
@@ -19,6 +32,8 @@ if hash opam 2>/dev/null; then eval $(opam env); fi
 export PATH="${HOME}/.local/share/ponyup/bin:${PATH}"
 # Rust
 . "${HOME}/.cargo/env"
+# Solidity
+export PATH="/home/theodus/.foundry/bin:${PATH}"
 
 export EDITOR=nvim
 export SHELL=/usr/bin/zsh
