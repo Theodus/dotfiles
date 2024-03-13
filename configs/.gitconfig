@@ -2,4 +2,4 @@
   email = theodusbutler@gmail.com
   name = Theo Butler
 [pull]
-	rebase = true
+  rebase = true
