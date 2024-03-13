@@ -52,11 +52,14 @@
   environment.systemPackages = with pkgs; [
     alacritty
     brave
+    clang
     git
     julia-mono
     neovim
+    rustup
     tmux
     tree
+    vscodium
     zsh
   ];
   environment.budgie.excludePackages = with pkgs; [
