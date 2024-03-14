@@ -57,6 +57,7 @@
     bottom
     clang
     cmake
+    fnm
     git
     julia-mono
     lld
