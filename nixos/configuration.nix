@@ -52,10 +52,14 @@
   environment.systemPackages = with pkgs; [
     alacritty
     brave
+    bottom
     clang
+    cmake
     git
     julia-mono
+    lld
     neovim
+    ripgrep
     rustup
     tmux
     tree
