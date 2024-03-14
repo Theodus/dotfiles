@@ -1,5 +1,4 @@
-# unstable channel
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   imports = [ ./hardware-configuration.nix ];
   system.stateVersion = "23.05";
@@ -49,6 +48,9 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "obsidian"
+  ];
   environment.systemPackages = with pkgs; [
     alacritty
     brave
@@ -59,8 +61,10 @@
     julia-mono
     lld
     neovim
+    obsidian
     ripgrep
     rustup
+    stow
     tmux
     tree
     vscodium

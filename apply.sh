@@ -15,3 +15,5 @@ fi
 
 rustup toolchain install stable
 cargo install fnm
+
+stow --target=$HOME configs
