@@ -55,6 +55,8 @@
     extraGroups = [ "docker" "networkmanager" "wheel" ];
   };
 
+  nix.settings.experimental-features = [ "flakes" "nix-command" ];
+
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "obsidian"
   ];
