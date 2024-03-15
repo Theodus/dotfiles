@@ -70,11 +70,13 @@
     lld
     neovim
     obsidian
+    openssl
     ripgrep
     rustup
     stow
     tmux
     tree
+    unixtools.xxd
     vscodium
     zsh
   ];
