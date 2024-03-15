@@ -9,6 +9,8 @@
   networking.networkmanager.enable = true;
   networking.hostName = "geoff";
   # networking.wireless.enable = true;
+  networking.firewall.enable = true;
+  networking.firewall.trustedInterfaces = [ "docker0" ];
 
   swapDevices = [ {
     device = "/var/lib/swapfile";
