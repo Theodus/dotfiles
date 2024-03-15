@@ -10,6 +10,11 @@
   networking.hostName = "geoff";
   # networking.wireless.enable = true;
 
+  swapDevices = [ {
+    device = "/var/lib/swapfile";
+    size = 1024 * 4;
+  } ];
+
   time.timeZone = "America/New_York";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
