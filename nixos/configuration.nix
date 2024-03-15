@@ -47,10 +47,12 @@
     pulse.enable = true;
   };
 
+  virtualisation.docker.enable = true;
+
   users.users.theodus = {
     isNormalUser = true;
     description = "theodus";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "docker" "networkmanager" "wheel" ];
   };
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
