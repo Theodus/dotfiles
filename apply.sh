@@ -4,8 +4,8 @@ set -e -u
 sudo pacman -Syu && sudo pacman -Syyu
 pamac install --no-confirm \
   base-devel clang cmake lld llvm llvm-libs \
-  libsecret \
-  alacritty bottom docker git jq neovim ripgrep shellcheck stow tmux zsh \
+  libsecret openssh \
+  alacritty bottom docker docker-compose git jq neovim ripgrep shellcheck stow tmux zsh \
   ttf-juliamono \
   brave-browser vscodium
 
