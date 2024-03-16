@@ -1,6 +1,3 @@
-USE_POWERLINE="true"
-HAS_WIDECHARS="false"
-
 # Clang
 export CC="clang"
 export CXX="clang++"
@@ -22,7 +19,7 @@ export PATH="${HOME}/.local/share/ponyup/bin:${PATH}"
 export PATH="/home/theodus/.foundry/bin:${PATH}"
 
 export EDITOR=nvim
-export SHELL=/usr/bin/zsh
+export SHELL=/run/current-system/sw/bin/fish
 
 alias code=codium
 alias la='ls -a'

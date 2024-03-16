@@ -34,7 +34,7 @@ style = "Regular"
 
 [shell]
 args = ["-l", "-c", "tmux"]
-program = "zsh"
+program = "fish"
 
 [window]
 decorations = "Full"

@@ -68,6 +68,7 @@
     bottom
     clang
     cmake
+    fish
     fnm
     git
     julia-mono
@@ -82,7 +83,6 @@
     tree
     unixtools.xxd
     vscodium
-    zsh
   ];
   environment.budgie.excludePackages = with pkgs; [
     mate.atril
