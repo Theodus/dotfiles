@@ -1,18 +1,27 @@
 #!/bin/sh
 set -e -u
 
-if !(nix-channel --list | grep unstable); then
-  sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+sudo pacman -Syu && sudo pacman -Syyu
+pamac install --no-confirm \
+  base-devel clang cmake lld llvm llvm-libs \
+  libsecret \
+  alacritty bottom docker git jq neovim ripgrep shellcheck stow tmux zsh \
+  ttf-juliamono \
+  brave-browser vscodium
+
+sudo systemctl enable docker
+sudo usermod -a -G docker "${USER}"
+# chsh -s /usr/bin/zsh "${USER}"
+
+if ! command -v rustup; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
-sudo cp nixos/configuration.nix /etc/nixos/configuration.nix
-sudo nixos-rebuild switch --upgrade
+cargo install fnm cargo-watch
 
 if [ ! -d "${HOME}/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm "${HOME}/.tmux/plugins/tpm"
   echo "tmux: run prefix + I"
 fi
-
-rustup toolchain install stable
 
 stow --target=$HOME configs

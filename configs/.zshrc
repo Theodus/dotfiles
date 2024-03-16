@@ -1,3 +1,18 @@
+# Use powerline
+USE_POWERLINE="true"
+# Has weird character width
+# Example:
+#    is not a diamond
+HAS_WIDECHARS="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
 # Clang
 export CC="clang"
 export CXX="clang++"
@@ -7,6 +22,8 @@ export GOPATH="${HOME}/src/go"
 export PATH="${GOPATH}/bin:${PATH}"
 # Idris2
 export PATH="${HOME}/.idris2/bin:${PATH}"
+# Rust
+. $HOME/.cargo/env
 # JS
 export PATH="${HOME}/.yarn/bin:${PATH}"
 export PATH="/home/theodus/.local/share/fnm:$PATH"
@@ -19,7 +36,7 @@ export PATH="${HOME}/.local/share/ponyup/bin:${PATH}"
 export PATH="/home/theodus/.foundry/bin:${PATH}"
 
 export EDITOR=nvim
-export SHELL=/run/current-system/sw/bin/fish
+export SHELL=/usr/bin/zsh
 
 alias code=codium
 alias la='ls -a'
