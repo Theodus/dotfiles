@@ -17,6 +17,7 @@ if ! command -v rustup; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
+source $HOME/.cargo/env
 cargo install fnm cargo-watch
 
 if [ ! -d "${HOME}/.tmux/plugins/tpm" ]; then
