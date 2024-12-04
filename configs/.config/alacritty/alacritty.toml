@@ -32,7 +32,7 @@ size = 14.0
 family = "JuliaMono Medium"
 style = "Regular"
 
-[shell]
+[terminal.shell]
 args = ["-l", "-c", "tmux"]
 program = "zsh"
 
@@ -43,3 +43,5 @@ opacity = 0.8
 [window.padding]
 x = 4
 y = 4
+
+[terminal]
