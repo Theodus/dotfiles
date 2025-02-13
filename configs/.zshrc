@@ -3,7 +3,7 @@ USE_POWERLINE="true"
 # Has weird character width
 # Example:
 #    is not a diamond
-HAS_WIDECHARS="true"
+HAS_WIDECHARS="false"
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
@@ -12,8 +12,6 @@ fi
 if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
-
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 
 # Clang
 export CC="clang"
@@ -24,8 +22,6 @@ export GOPATH="${HOME}/src/go"
 export PATH="${GOPATH}/bin:${PATH}"
 # Idris2
 export PATH="${HOME}/.idris2/bin:${PATH}"
-# Rust
-. $HOME/.cargo/env
 # JS
 export PATH="${HOME}/.yarn/bin:${PATH}"
 export PATH="/home/theodus/.local/share/fnm:$PATH"
@@ -34,12 +30,14 @@ eval "`fnm env`"
 if hash opam 2>/dev/null; then eval $(opam env); fi
 # Pony
 export PATH="${HOME}/.local/share/ponyup/bin:${PATH}"
+# Rust
+. "${HOME}/.cargo/env"
 # Solidity
 export PATH="/home/theodus/.foundry/bin:${PATH}"
 
 export EDITOR=nvim
 export SHELL=/usr/bin/zsh
 
-alias code=codium
+alias zed=zeditor
 alias la='ls -a'
 alias ll='ls -lah'
