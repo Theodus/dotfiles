@@ -1,0 +1,16 @@
+font-family = "JuliaMono Medium"
+window-decoration = "none"
+
+keybind = alt+a>r=reload_config
+keybind = alt+a>n=new_window
+keybind = alt+a>t=new_tab
+
+keybind = alt+a>up=goto_split:up
+keybind = alt+a>down=goto_split:down
+keybind = alt+a>left=goto_split:left
+keybind = alt+a>right=goto_split:right
+
+keybind = alt+a>shift+up=new_split:up
+keybind = alt+a>shift+down=new_split:down
+keybind = alt+a>shift+left=new_split:left
+keybind = alt+a>shift+right=new_split:right

@@ -20,9 +20,4 @@ fi
 source $HOME/.cargo/env
 cargo install fnm cargo-watch
 
-if [ ! -d "${HOME}/.tmux/plugins/tpm" ]; then
-  git clone https://github.com/tmux-plugins/tpm "${HOME}/.tmux/plugins/tpm"
-  echo "tmux: run prefix + I"
-fi
-
 stow --target=$HOME configs
