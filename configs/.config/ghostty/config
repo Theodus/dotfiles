@@ -5,6 +5,7 @@ window-decoration = "none"
 keybind = alt+a>r=reload_config
 keybind = alt+a>n=new_window
 keybind = alt+a>t=new_tab
+keybind = alt+a>z=toggle_split_zoom
 
 keybind = alt+a>up=goto_split:up
 keybind = alt+a>down=goto_split:down
