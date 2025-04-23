@@ -23,6 +23,7 @@ export PATH="${GOPATH}/bin:${PATH}"
 # Idris2
 export PATH="${HOME}/.idris2/bin:${PATH}"
 # JS
+export PATH="/home/theodus/.bun/bin:$PATH"
 export PATH="${HOME}/.yarn/bin:${PATH}"
 export PATH="/home/theodus/.local/share/fnm:$PATH"
 eval "`fnm env`"
