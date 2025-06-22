@@ -39,6 +39,5 @@ export PATH="/home/theodus/.foundry/bin:${PATH}"
 export EDITOR=nvim
 export SHELL=/usr/bin/zsh
 
-alias zed=zeditor
 alias la='ls -a'
 alias ll='ls -lah'
