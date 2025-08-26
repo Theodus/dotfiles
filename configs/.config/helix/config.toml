@@ -2,8 +2,9 @@ theme = "monokai"
 
 [editor]
 line-number = "relative"
-rulers = [80]
+rulers = [80, 100]
 scrolloff = 8
+soft-wrap.enable = true
 
 [editor.auto-save]
 focus-lost = true
@@ -15,3 +16,8 @@ select = "underline"
 
 [editor.lsp]
 snippets = false
+
+[keys.normal]
+"C-right" = "move_next_word_end"
+"C-left" = "move_prev_word_start"
+
