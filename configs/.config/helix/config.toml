@@ -1,7 +1,10 @@
 theme = "monokai"
 
 [editor]
-line-number = "relative"
+bufferline = "always" # tab bar at top
+color-modes = true
+# line-number = "relative"
+mouse = true
 rulers = [80, 100]
 scrolloff = 8
 soft-wrap.enable = true
@@ -14,10 +17,14 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.file-picker]
+hidden = true
+
 [editor.lsp]
+display-messages = true
+display-signature-help-docs = true
 snippets = false
 
 [keys.normal]
-"C-right" = "move_next_word_end"
-"C-left" = "move_prev_word_start"
-
+C-right = "move_next_word_end"
+C-left = "move_prev_word_start"
