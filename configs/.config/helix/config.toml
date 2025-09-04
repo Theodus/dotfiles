@@ -28,3 +28,4 @@ snippets = false
 [keys.normal]
 C-right = "move_next_word_end"
 C-left = "move_prev_word_start"
+"#" = "toggle_comments"
