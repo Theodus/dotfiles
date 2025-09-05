@@ -18,7 +18,7 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = true
+hidden = false
 
 [editor.lsp]
 display-messages = true
@@ -29,3 +29,7 @@ snippets = false
 C-right = "move_next_word_end"
 C-left = "move_prev_word_start"
 "#" = "toggle_comments"
+
+[keys.insert]
+C-right = ["move_next_word_end", "move_char_right"]
+C-left = ["move_prev_word_start"]
