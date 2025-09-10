@@ -36,7 +36,7 @@ export PATH="${HOME}/.local/share/ponyup/bin:${PATH}"
 # Solidity
 export PATH="/home/theodus/.foundry/bin:${PATH}"
 
-export EDITOR=nvim
+export EDITOR=helix
 export SHELL=/usr/bin/zsh
 
 alias la='ls -a'
