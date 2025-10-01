@@ -4,10 +4,9 @@ set -e -u
 sudo pacman -Syu && sudo pacman -Syyu
 pamac install --no-confirm \
   base-devel clang cmake lld llvm llvm-libs \
-  libsecret openssh \
-  alacritty bottom docker docker-compose git jq neovim ripgrep shellcheck stow tmux zsh \
+  bottom docker docker-compose git helix jq ripgrep stow zsh \
   ttf-juliamono \
-  brave-browser vscodium
+  brave-browser
 
 sudo systemctl enable docker
 sudo usermod -a -G docker "${USER}"
@@ -18,6 +17,7 @@ if ! command -v rustup; then
 fi
 
 source $HOME/.cargo/env
-cargo install fnm cargo-watch
+rustup component add rust-analyzer
+cargo install cargo-shear cargo-watch fnm
 
 stow --target=$HOME configs
